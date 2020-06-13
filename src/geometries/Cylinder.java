@@ -1,6 +1,6 @@
 package geometries;
 
-import primitives.Ray;
+import premitives.Ray;
 
 public class Cylinder extends Tube {
     private double _height;

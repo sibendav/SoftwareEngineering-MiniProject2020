@@ -1,7 +1,9 @@
 package geometries;
 
-import primitives.Point3D;
-import primitives.Vector;
+import premitives.Point3D;
+import premitives.Vector;
+import premitives.Point3D;
+import premitives.Vector;
 
 public class Sphere extends RadialGeometry {
 
@@ -40,4 +42,7 @@ public class Sphere extends RadialGeometry {
                 "_center=" + _center +
                 '}';
     }
+
+
+
 }

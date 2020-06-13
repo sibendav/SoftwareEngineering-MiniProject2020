@@ -1,7 +1,7 @@
 package geometries;
 
-import primitives.Point3D;
-import primitives.Vector;
+import premitives.Point3D;
+import premitives.Vector;
 
 public class Plane implements Geometry {
     private Point3D _p;
@@ -11,7 +11,7 @@ public class Plane implements Geometry {
         this._p = _p;
         this._normal = _normal;
     }
-    public Plane(Point3D _p1, Point3D _p2,Point3D _p3) {
+    public Plane(Point3D _p1, Point3D _p2,Point3D _p3)  {
         this._p = _p1;
         Vector v1=new Vector(_p2);
         Vector v2=new Vector(_p3);

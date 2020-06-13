@@ -1,15 +1,15 @@
 package geometries;
 
-import primitives.Point3D;
-import primitives.Vector;
-import primitives.Ray;
+import premitives.Point3D;
+import premitives.Vector;
+import premitives.Ray;
 
 import java.util.Objects;
 
 public class Tube extends RadialGeometry  {
     private Ray _axisRay;
 
-    Tube(double j, Ray r) {
+   public Tube(double j, Ray r) {
         super(j);
         _axisRay=r;
     }

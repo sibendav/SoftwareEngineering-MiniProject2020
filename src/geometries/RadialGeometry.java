@@ -3,7 +3,7 @@ package geometries;
 import java.util.Objects;
 
 public abstract class RadialGeometry implements Geometry{
-   private double _radius;
+    private double _radius;
     RadialGeometry(double j)
     {
         _radius=j;
