@@ -1,6 +1,9 @@
-import primitives.*;
+//Tahel Nadav 207816612
+//Simha Ben-David 209166776
+
+import premitives.*;
 import static java.lang.System.out;
-import static primitives.Util.*;
+import static premitives.Util.*;
 
 /**
  * Test program for the 1st stage
@@ -11,20 +14,24 @@ public final class Main {
 
     /**
      * Main program to tests initial functionality of the 1st stage
-     * 
+     *
      * @param args irrelevant here
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Throwable {
 
         try { // test zero vector
             new Vector(0, 0, 0);
             out.println("ERROR: zero vector does not throw an exception");
-        } catch (Exception e) {}
-
-        Vector v1 = new Vector(1, 2, 3);
-        Vector v2 = new Vector(-2, -4, -6);
-        Vector v3 = new Vector(0, 3, -2);
-
+        } catch (IllegalArgumentException e) {}
+        //try {
+            Vector v1 = new Vector(1, 2, 3);
+            Vector v2 = new Vector(-2, -4, -6);
+            Vector v3 = new Vector(0, 3, -2);
+      //  }
+       // catch (Exception x)
+      //  {
+         //   System.out.println(x.toString());
+       // }
         // test length..
         if (!isZero(v1.lengthSquared() - 14))
             out.println("ERROR: lengthSquared() wrong value");
@@ -61,12 +68,13 @@ public final class Main {
             out.println("ERROR: normalizated() function does not create a new vector");
 
         // Test operations with points and vectors
-        Point3D p1 = new Point3D(1, 2, 3); 
+        Point3D p1 = new Point3D(1, 2, 3);
         if (!Point3D.ZERO.equals(p1.add(new Vector(-1, -2, -3))))
             out.println("ERROR: Point + Vector does not work correctly");
         if (!new Vector(1, 1, 1).equals(new Point3D(2, 3, 4).subtract(p1)))
-             out.println("ERROR: Point - Point does not work correctly");
+            out.println("ERROR: Point - Point does not work correctly");
 
         out.println("If there were no any other outputs - all tests succeeded!");
     }
 }
+
